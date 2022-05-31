@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Magic Notes</a>
         <button
@@ -33,22 +33,23 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              id="searchTxt";
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
+          <!-- <form class="d-flex"> -->
+            <input style="border-radius: 5px; padding-top: 4px; padding-bottom: 4px;"
+            class="me-2"
+            id="searchTxt";
+            placeholder=" Search"
+            aria-label="Search"
+            onkeypress="searchOnEnter()"
             />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+          <!-- </form> -->
+          <button class="btn btn-outline-success" id="searchBtn" onclick="handleSearch()" style="padding: 4px 20px 4px 20px;">
+            Search
+          </button>
+          <button type="button" class="btn-close btn-close-white" aria-label="Cancel Search" onclick="handleCancelSearch()" style="margin-left: 10px; margin-right: 10px;"></button>
         </div>
       </div>
     </nav>
-    <div class="container my-3" style="width: 61%">
+    <div class="container my-3" style="width: 85%; max-width: 920px;">
       <h1>Welcome to Magic Notes</h1>
       <div class="card">
         <div class="card-body">
